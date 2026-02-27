@@ -1,0 +1,14 @@
+shard-spec: "0.1.0"
+version: "0.1.0"
+name: Reports
+shorthand: rpt
+description: Create and organize reports - research findings, code reviews, concept explainers
+
+install:
+  - source: inst-rpt-dashboard.md
+    dest: Mesh/(Dashboard) Reports.md
+    once: true
+
+folders:
+  - Mesh/Types/Reports/
+  - Mesh/Archive/Reports/
