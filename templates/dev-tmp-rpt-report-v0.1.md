@@ -6,14 +6,15 @@
 ---
 id: [generate-uuid]
 tags:
-  - "#report"
   - "#rpt/report"
 status: [active|consumed]
 date-created: [YYYY-MM-DD]
 /* If Increments shard is installed: */
 increment: "[[parent increment]]"
 [agent]-sessions: /* replace [agent] with your agent type (claude, codex, etc.) */
-template: tmp-rpt-report
+template: "[[dev-tmp-rpt-report-v0.1]]"
+authors: /* from .flint/identity.json; omit if no identity set */
+  - "[[@Person Name]]"
 ---
 
 # [Report Title]

@@ -23,10 +23,10 @@ active → consumed
 
 | Template | File | Purpose |
 |----------|------|---------|
-| Report | `tmp-rpt-report.md` | Standard report format |
+| Report | `dev-tmp-rpt-report.md` | Standard report format |
 
 ## Workflows
 
 | Workflow | File | Purpose |
 |----------|------|---------|
-| Create Report | `wkfl-rpt-create.md` | Create a new report |
+| Create Report | `dev-wkfl-rpt-create.md` | Create a new report |

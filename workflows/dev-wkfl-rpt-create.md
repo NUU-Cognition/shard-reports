@@ -1,3 +1,5 @@
+> [!important] THIS FILE IS AN INSTRUCTION. WHEN REFERENCED IT IS MEANT TO BE TAKEN AS AN ACTION.
+
 This workflow belongs to the Reports shard. Ensure you have the @init-rpt.md in context before continuing.
 
 # Workflow: Create Report

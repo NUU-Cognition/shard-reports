@@ -3,11 +3,17 @@ version: "0.1.0"
 name: Reports
 shorthand: rpt
 description: Create and organize reports - research findings, code reviews, concept explainers
+dependencies:
+  - source: NUU-Cognition/shard-flint
+
+types:
+  - name: Report
+    source: type-rpt-report.md
 
 install:
   - source: inst-rpt-dashboard.md
     dest: Mesh/(Dashboard) Reports.md
-    once: true
+    mode: once
 
 folders:
   - Mesh/Types/Reports/
