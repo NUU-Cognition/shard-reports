@@ -1,11 +1,12 @@
 shard-spec: "0.3.0"
 id: 01e92d4a-f906-47d6-8e37-2d0109ff1d74
-version: "0.1.0"
+version: "0.1.1"
 name: Reports
 shorthand: rpt
 description: Create and organize reports - research findings, code reviews, concept explainers
 dependencies:
   - source: NUU-Cognition/shard-flint
+    version: "0.3.0"
 
 types:
   - name: Report
