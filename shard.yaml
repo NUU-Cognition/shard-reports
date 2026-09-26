@@ -1,9 +1,9 @@
 shard-spec: "0.3.0"
 id: 01e92d4a-f906-47d6-8e37-2d0109ff1d74
-org: nuu-cognition
+org: nuucognition
 source:
   id: a4c4298b-cfee-4a99-8a4a-075e3e3e49bf
-version: "0.1.1"
+version: "0.1.2"
 name: Reports
 shorthand: rpt
 description: Create and organize reports - research findings, code reviews, concept explainers
