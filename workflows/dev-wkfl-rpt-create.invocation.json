@@ -24,7 +24,7 @@
       "by": "agent",
       "evidence": "required",
       "stage": "Stage 1: Report Creation",
-      "next": "Create the report. Then set the output: flint shard invocations set-output {{invocation}} report=\"(Report) NNN Title\"."
+      "next": "Create the report. Then set the output: flint shard invocations set-output {{invocation}} report='(Report) NNN Title'."
     },
     {
       "id": "review",
