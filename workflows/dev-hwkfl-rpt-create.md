@@ -14,6 +14,7 @@ You can run this workflow as a shard invocation. The invocation is a durable rec
 - Inside an open headless task, the report runs as a child of the task: the default parent is the current frame of the session. The `report` step of `hwkfl-proj-do_task` gives the exact command.
 - After step 1, set the output: `flint shard invocations set-output <id> report="(Report) NNN Title"`. The hint gives the id. When the report closes, the parent gets this output.
 - Mark each step when it is done: `flint shard step done <step> --evidence "<…>"`. The steps are `create` and `review`.
+- Outside an Orbh session (no `ORBH_SESSION_ID`), give `--invocation <id>` to `flint shard step`, for example `flint shard step done <step> --invocation <id> --evidence "<…>"`. The hint after each write prints the id.
 - After step 2, close the invocation: `flint shard invocations close <id> --outcome done`. Then the parent is the current frame again.
 - When no invocation is open, follow the steps with no record.
 
