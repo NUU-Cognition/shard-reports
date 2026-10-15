@@ -1,0 +1,38 @@
+{
+  "format": "shard-invocation/0.2",
+  "workflow": "wkfl-rpt-create",
+  "title": "Create Report",
+  "inputs": {
+    "source": {
+      "kind": "text",
+      "required": false,
+      "description": "The artifact or the topic that the report is for, for example \"(Task) 744 Nested Invocations\"."
+    }
+  },
+  "outputs": {
+    "report": {
+      "kind": "artifact",
+      "type": "Report",
+      "required": true,
+      "description": "The report, for example \"(Report) 031 Title\". Set it after Stage 1."
+    }
+  },
+  "steps": [
+    {
+      "id": "create",
+      "title": "Report Creation",
+      "by": "agent",
+      "evidence": "required",
+      "stage": "Stage 1: Report Creation",
+      "next": "Create the report. Then set the output: flint shard invocations set-output report=\"(Report) NNN Title\"."
+    },
+    {
+      "id": "review",
+      "title": "Report Review",
+      "by": "agent",
+      "evidence": "optional",
+      "stage": "Stage 2: Report Review",
+      "next": "Give {{output.report}} to the person, and refine it until the person confirms it."
+    }
+  ]
+}
