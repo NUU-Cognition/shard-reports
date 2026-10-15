@@ -1,0 +1,38 @@
+{
+  "format": "shard-invocation/0.2",
+  "workflow": "hwkfl-rpt-create",
+  "title": "Headless Create Report",
+  "inputs": {
+    "source": {
+      "kind": "text",
+      "required": false,
+      "description": "The artifact or the topic that the report is for, for example \"(Task) 744 Nested Invocations\"."
+    }
+  },
+  "outputs": {
+    "report": {
+      "kind": "artifact",
+      "type": "Report",
+      "required": true,
+      "description": "The report, for example \"(Report) 031 Title\". Set it after step 1."
+    }
+  },
+  "steps": [
+    {
+      "id": "create",
+      "title": "Create",
+      "by": "agent",
+      "evidence": "required",
+      "stage": "1. Create",
+      "next": "Create the report. Then set the output: flint shard invocations set-output {{invocation}} report=\"(Report) NNN Title\"."
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "by": "agent",
+      "evidence": "optional",
+      "stage": "2. Review",
+      "next": "Check {{output.report}} yourself: the Summary, a source for each claim, and no placeholder. Fix each problem. Do not wait for a person."
+    }
+  ]
+}

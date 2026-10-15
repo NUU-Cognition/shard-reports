@@ -30,3 +30,4 @@ active → consumed
 | Workflow | File | Purpose |
 |----------|------|---------|
 | Create Report | `dev-wkfl-rpt-create.md` | Create a new report |
+| Headless Create Report | `dev-hwkfl-rpt-create.md` | Create a report in a headless Orbh session: the review is a self-check, with no person gate |

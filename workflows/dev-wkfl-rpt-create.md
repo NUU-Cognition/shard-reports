@@ -10,9 +10,9 @@ Create a new report.
 
 You can run this workflow as a shard invocation. The invocation is a durable record of the report: its steps and its output. The stages below do not change.
 
-- Start the workflow with `flint shard invoke rpt create --input source="<the artifact or the topic>"`. The input `source` is optional.
+- Start the workflow with `flint shard invoke rpt create --input source="<the artifact or the topic>"`. The input `source` is optional. In a headless session, use [[dev-hwkfl-rpt-create]] (`--headless`): its review needs no person.
 - Inside an open task, the report runs as a child of the task: the default parent is the current frame of the session. The `report` step of `wkfl-proj-do_task` gives the exact command.
-- After Stage 1, set the output: `flint shard invocations set-output report="(Report) NNN Title"`. When the report closes, the parent gets this output.
+- After Stage 1, set the output: `flint shard invocations set-output <id> report="(Report) NNN Title"`. The hint after each write prints the command with the id of the invocation. When the report closes, the parent gets this output.
 - Mark each step when it is done: `flint shard step done <step> --evidence "<…>"`. The steps are `create` and `review`.
 - After Stage 2, close the invocation: `flint shard invocations close <id> --outcome done`. Then the parent is the current frame again.
 - When no invocation is open, follow the stages with no record.

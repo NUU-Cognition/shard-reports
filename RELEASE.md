@@ -2,6 +2,7 @@
 
 - The workflow Create Report has an invocation file of the format `shard-invocation/0.2` (NUU Orbh Task 744). `flint shard invoke rpt create --input source="<the artifact or the topic>"` starts one. The steps are `create` and `review`. The output is `report`.
 - Inside a task, the report opens as a child of the task (the default parent). The `report` step of the Projects workflows gives the command.
+- A new headless workflow `hwkfl-rpt-create` has the same steps and its own invocation file. Its review is a self-check with no person gate. A headless task calls it with `flint shard invoke rpt create --headless`.
 - This version needs a Flint CLI with shard invocations 0.2 (NUU Orbh Task 744).
 
 # 0.1.4
