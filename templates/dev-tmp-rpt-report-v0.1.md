@@ -11,7 +11,8 @@ status: [active|consumed]
 date-created: [YYYY-MM-DD]
 /* If Increments shard is installed: */
 increment: "[[parent increment]]"
-[agent]-sessions: /* replace [agent] with your agent type (claude, codex, etc.) */
+orb: /* the v1 address of each agent session that edits this report: append the by address of flint address me. An old report keeps its orbh-sessions field: never remove it. */
+  - "[the output of flint address me]"
 template: "[[dev-tmp-rpt-report-v0.1]]"
 authors: /* from .flint/identity.json; omit if no identity set */
   - "[[@Person Name]]"
